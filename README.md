@@ -12,8 +12,6 @@
 
 It runs as a set of Python microservices that crawl your content, process it through a real-time streaming pipeline, store it in a vector database, and serve it through a chat UI backed by an LLM.
 
-This project started from the open-source **[LLM Twin course by Decoding ML](https://github.com/decodingml/llm-twin-course)** and has been substantially reworked to run fully locally, without requiring paid cloud infrastructure:
-
 - **Groq-powered inference** instead of AWS SageMaker — no fine-tuning deployment, no GPU cloud costs. Query expansion, self-query, reranking, and final generation all run on Groq's free-tier API.
 - **Fixed for local/Windows development** — resolved several environment-loading and MongoDB replica-set bugs that only surface when running outside Docker.
 - **Redesigned chat UI** — a custom-themed Gradio interface with clear request/response bubbles.
@@ -104,11 +102,3 @@ My-LLM-Twin/
 ├── Makefile / run.ps1             # Task runners (Linux/macOS and Windows)
 └── pyproject.toml                 # Dependencies
 ```
-
-## 🙏 Acknowledgments
-
-This project is built on top of the open-source **[LLM Twin course](https://github.com/decodingml/llm-twin-course)** by [Decoding ML](https://decodingml.substack.com/). Full credit to the original authors for the system design and course material this project was adapted from.
-
-## License
-
-Released under the MIT license — see [LICENSE](LICENSE). As required by the license, the original copyright notice is preserved.
